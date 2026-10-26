@@ -1,0 +1,11 @@
+metric,value
+shapiro_w,0.9222519990729658
+shapiro_p_value,5.62994065590579e-5
+heteroskedasticity_lm_statistic,0.9878972543692284
+heteroskedasticity_df,1
+heteroskedasticity_p_value,0.32025684750120087
+residual_lag1_correlation,-0.009021257461815969
+durbin_watson_statistic,2.017223051533837
+max_cooks_distance,0.25484618646972956
+cooks_reference_threshold,0.045454545454545456
+cooks_flagged_count,5

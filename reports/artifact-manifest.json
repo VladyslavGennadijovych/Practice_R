@@ -1,0 +1,30 @@
+{
+  "reports/Practice_R_Report.docx": {
+    "bytes": 1370389,
+    "sha256": "93af0fed5941d98fa89801056e0deb06eeac9912d0c0a55c74d67678e88ba648"
+  },
+  "reports/Practice_R_Report.pdf": {
+    "bytes": 1723028,
+    "sha256": "ced898eaf0a2ac8685b9f2a8dc708219d87b76b0d6a3863b591918a89282bdd1"
+  },
+  "reports/screenshots/rstudio-code.png": {
+    "bytes": 406189,
+    "sha256": "f95fe2e62224db53679d48ff861e679df1b3acd60eeae6bd9a543dfcbbfd62ef"
+  },
+  "reports/screenshots/rstudio-results.png": {
+    "bytes": 176785,
+    "sha256": "1ab3f9b677ba641fa661a683d18ab04c7d852289576477f5aeeee75e6f2a11f5"
+  },
+  "analysis.R": {
+    "bytes": 21185,
+    "sha256": "80aa0620a1370677dbc9d9c06b61fb0e524e9a6ba2f4d7a75a0d999bbbf03168"
+  },
+  "data/raw/airquality.csv": {
+    "bytes": 2814,
+    "sha256": "f623597036b33bc8d8902550d83640c84e1eb21c3ee4337efe9c646e615f832d"
+  },
+  "data/processed/airquality_clean.csv": {
+    "bytes": 5050,
+    "sha256": "256de19bd1c372e69734b3e9be1345d4f1f52b90b0a05e41853c89377d17d866"
+  }
+}

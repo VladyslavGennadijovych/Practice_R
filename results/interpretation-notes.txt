@@ -1,0 +1,14 @@
+Interpretation notes
+Data source: datasets::airquality, 153 daily New York observations from May–September 1973.
+Complete-case analysis drops any row missing one of the six source fields; no imputation is used.
+Outliers flagged by the 1.5 IQR rule are retained if physically plausible.
+Pearson/Spearman correlations describe all cleaned observations; BH adjusts six Pearson p-values.
+The regression specification is fixed in advance: ozone_ppb ~ temp_c + wind_ms + solar_langley.
+Only the first chronological 80% of clean rows train the model; the final 20% are held out.
+Regression coefficients describe conditional associations, not causal effects.
+The heteroskedasticity diagnostic is an LM auxiliary-regression test of squared residuals on fitted values (1 df).
+Lag-1 correlation and Durbin–Watson are descriptive checks here, without formal p-values; dates can have gaps.
+Shapiro–Wilk, residual plots, influence flags and prediction interval coverage must be considered together.
+Normal-error linear prediction intervals can extend below zero; they are reported unchanged, not silently clipped.
+Complete-case selection, historical data, temporal gaps and possible residual assumption violations limit generalisation.
+Use predictions only within the observed covariate range and this historical context; modern air-quality decisions need new validation.

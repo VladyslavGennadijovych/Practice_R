@@ -64,6 +64,6 @@ fi
 
 source "$scripts_dir/activate-r.sh"
 cd "$repo_root"
-Rscript --vanilla -e 'stopifnot(getRversion() == "4.5.3"); cat(R.version.string, "\n")'
+Rscript --vanilla -e 'stopifnot(getRversion() == "4.5.3"); for (p in c("ggplot2", "dplyr", "readr")) stopifnot(requireNamespace(p, quietly=TRUE)); cat(R.version.string, "\n")'
 Rscript --vanilla "$scripts_dir/check-r.R"
 bash "$scripts_dir/check-native.sh"

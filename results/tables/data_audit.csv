@@ -1,0 +1,10 @@
+metric,value
+raw_rows,153
+raw_columns,6
+parse_errors,0
+missing_cells,44
+rows_with_missing_values,42
+exact_duplicate_rows,0
+invalid_rows_after_deduplication,0
+clean_rows,111
+removed_rows,42

@@ -1,0 +1,6 @@
+PASS 1: unexpected CSV schema is rejected
+PASS 2: malformed numeric input is rejected and parsing errors are recorded
+PASS 3: fewer than 50 valid complete observations are rejected
+PASS 4: duplicates, physical errors and impossible dates are cleaned without losing valid rows
+PASS 5: saved model reproduces held-out predictions and prediction interval bounds
+RESULT: 5/5 analysis integration checks passed

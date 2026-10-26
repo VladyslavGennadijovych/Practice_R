@@ -1,0 +1,121 @@
+
+1 DATA PREPARATION
+# A tibble: 9 × 2
+  metric                           value
+  <chr>                            <int>
+1 raw_rows                           153
+2 raw_columns                          6
+3 parse_errors                         0
+4 missing_cells                       44
+5 rows_with_missing_values            42
+6 exact_duplicate_rows                 0
+7 invalid_rows_after_deduplication     0
+8 clean_rows                         111
+9 removed_rows                        42
+# A tibble: 6 × 2
+  variable missing_count
+  <chr>            <int>
+1 Ozone               37
+2 Solar.R              7
+3 Wind                 0
+4 Temp                 0
+5 Month                0
+6 Day                  0
+
+2 DESCRIPTIVE STATISTICS
+      variable   n       mean     median              modes mode_frequency
+     ozone_ppb 111  42.099099  31.000000                 23              6
+ solar_langley 111 184.801802 207.000000                238              4
+       wind_ms 111   4.443417   4.336288 4.604512; 5.140960             10
+        temp_c 111  25.440440  26.111111          27.222222             10
+   variance        sd       min        max
+ 1107.29009 33.275969  1.000000 168.000000
+ 8308.74218 91.152302  7.000000 334.000000
+    2.52950  1.590440  1.028192   9.253728
+   28.03096  5.294427 13.888889  36.111111
+
+3 VISUALISATION
+# A tibble: 4 × 4
+  variable      lower_fence upper_fence flagged_count
+  <chr>               <dbl>       <dbl>         <int>
+1 ozone_ppb         -48          128                2
+2 solar_langley     -99.5        468.               0
+3 wind_ms             0.559        7.89             3
+4 temp_c             10.4         40.4              0
+
+4 CORRELATION ANALYSIS
+    variable_1    variable_2   n  pearson_r   ci_lower    ci_upper      p_value
+     ozone_ppb solar_langley 111  0.3483417  0.1731940  0.50213196 1.793109e-04
+     ozone_ppb       wind_ms 111 -0.6124966 -0.7170298 -0.48101924 9.089415e-13
+     ozone_ppb        temp_c 111  0.6985414  0.5888139  0.78298694 1.552677e-17
+ solar_langley       wind_ms 111 -0.1271835 -0.3063148  0.06064716 1.834520e-01
+ solar_langley        temp_c 111  0.2940876  0.1139405  0.45551131 1.730786e-03
+       wind_ms        temp_c 111 -0.4971897 -0.6256061 -0.34254099 2.841966e-08
+ spearman_rho p_adjusted_bh
+   0.34818647  2.689663e-04
+  -0.60513642  2.726825e-12
+   0.77293193  9.316063e-17
+  -0.06169636  1.834520e-01
+   0.20953692  2.076943e-03
+  -0.49932278  5.683931e-08
+
+5 LINEAR REGRESSION AND PREDICTION
+Training: 88 days (1973-05-01 to 1973-09-06); test: 23 days (1973-09-07 to 1973-09-30)
+          term    estimate   std_error     t_value      p_value     ci_lower
+   (Intercept) -0.68773454 17.71410901 -0.03882411 9.691227e-01 -35.91418295
+        temp_c  2.76959258  0.50765435  5.45566595 4.829290e-07   1.76006622
+       wind_ms -8.39527108  1.64938577 -5.08993786 2.156800e-06 -11.67525557
+ solar_langley  0.06572122  0.02677188  2.45485983 1.615762e-02   0.01248239
+  ci_upper
+ 34.538714
+  3.779119
+ -5.115287
+  0.118960
+ scenario temp_c wind_ms solar_langley      fit        lwr       upr
+        A     20       4           150 30.98122 -13.583854  75.54629
+        B     25       4           200 48.11524   3.984736  92.24574
+        C     25       3           200 56.51051  12.136992 100.88403
+
+6 MODEL VALIDATION
+                            metric                value
+                           clean_n                  111
+                           train_n                   88
+                            test_n                   23
+                   train_r_squared    0.619694537606142
+          train_adjusted_r_squared    0.606112199663504
+                 model_f_statistic     45.6250271656687
+                   model_f_p_value 1.35722053039291e-17
+                        train_rmse     21.5354050726838
+                 train_residual_sd     22.0421898231341
+                         test_rmse     18.7735308425761
+                          test_mae     15.5773411201256
+                    test_r_squared    -2.67840524991506
+                test_baseline_rmse     27.7399435669595
+          test_mean_reference_rmse     9.78850064113561
+ test_prediction_interval_coverage                    1
+                       train_start           1973-05-01
+                         train_end           1973-09-06
+                        test_start           1973-09-07
+                          test_end           1973-09-30
+                          metric         value
+                       shapiro_w  9.222520e-01
+                 shapiro_p_value  5.629941e-05
+ heteroskedasticity_lm_statistic  9.878973e-01
+           heteroskedasticity_df  1.000000e+00
+      heteroskedasticity_p_value  3.202568e-01
+       residual_lag1_correlation -9.021257e-03
+         durbin_watson_statistic  2.017223e+00
+              max_cooks_distance  2.548462e-01
+       cooks_reference_threshold  4.545455e-02
+             cooks_flagged_count  5.000000e+00
+      variable      vif
+        temp_c 1.439433
+       wind_ms 1.340711
+ solar_langley 1.093317
+
+7 OUTPUT COMPLETE
+Processed data: data/processed/airquality_clean.csv
+Statistical tables: results/tables/
+Eight figures: results/figures/
+Saved training model: results/models/ozone_linear_model.rds
+Important: association is not causation; inspect diagnostics before using forecasts.

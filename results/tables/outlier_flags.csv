@@ -1,0 +1,5 @@
+variable,lower_fence,upper_fence,flagged_count
+ozone_ppb,-48,128,2
+solar_langley,-99.5,468.5,0
+wind_ms,0.5588000000000002,7.890255999999999,3
+temp_c,10.416666666666673,40.41666666666666,0
