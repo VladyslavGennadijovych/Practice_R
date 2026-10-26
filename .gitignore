@@ -1,0 +1,24 @@
+# Local R sessions and IDE state
+.Rhistory
+.RData
+.RDataTmp
+.Ruserdata
+.Rproj.user/
+Rplots.pdf
+
+# Generated native build artifacts
+*.o
+*.so
+*.dll
+*.dylib
+*.a
+
+# Local toolchain, caches, and logs
+.practice-r-setup/
+renv/library/
+renv/staging/
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
