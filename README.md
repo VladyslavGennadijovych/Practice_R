@@ -88,9 +88,12 @@ Rscript --vanilla analysis.R data/raw/airquality.csv /tmp/practice-r-result
 - [results/analysis-output.txt](results/analysis-output.txt) — фактичний вивід виконання.
 - [results/session-info.txt](results/session-info.txt) — версії R і пакетів під час виконання.
 - [reports/Practice_R_Report.docx](reports/Practice_R_Report.docx) та [reports/Practice_R_Report.pdf](reports/Practice_R_Report.pdf) — звіт із поясненнями та ілюстраціями.
+- [Щоденник і звіт за зразком ЧНУ — Word](reports/Practice_R_Diary_Katsap_602.docx) та [PDF](reports/Practice_R_Diary_Katsap_602.pdf) — Кацап Владислав Геннадійович, 602 група; керівник Унгурян Галина Михайлівна. Містить сім етапів роботи, результати, відгук магістранта й два скриншоти RStudio.
 - [environment/start.md](environment/start.md) — інструкції запуску хмарного середовища.
 
 Текст звіту можна повторно зібрати командою `python3 scripts/build-report.py` після аналізу; потрібні `python-docx` та `Pillow`, а також наявні скриншоти. PDF отримано з того самого DOCX у LibreOffice з перевіркою всіх сторінок. Усі числові таблиці беруться зі збережених результатів R; якщо змінюються дані, також перегляньте інтерпретацію, підписи та знімки.
+
+Щоденник за наданим університетським зразком збирається командою `python3 scripts/build-diary.py` (потрібен `python-docx`). Зразок збережено в `reports/templates/practice-diary-template.docx`. Період практики 12–31 жовтня 2026 року та місце практики підтверджені студентом; для окремих етапів зазначено цей загальний період. Дата оформлення — 4 листопада 2026 року. Підписи та реквізити протоколу залишено для офіційного заповнення. PDF потрібно повторно експортувати з готового DOCX після зміни тексту.
 
 ## Перевірки
 
