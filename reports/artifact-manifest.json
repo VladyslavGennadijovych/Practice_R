@@ -28,12 +28,12 @@
     "sha256": "256de19bd1c372e69734b3e9be1345d4f1f52b90b0a05e41853c89377d17d866"
   },
   "reports/Practice_R_Diary_Katsap_602.docx": {
-    "bytes": 570084,
-    "sha256": "9d2b0f1f5c11556f59acb276250c5cab382b17d8142b30a3ee3e7bcf70635b72"
+    "bytes": 1059339,
+    "sha256": "4cdd07e04a8302bdffc454f3bc63a12fc7a6fb1d539a61d59899db34fd977072"
   },
   "reports/Practice_R_Diary_Katsap_602.pdf": {
-    "bytes": 726560,
-    "sha256": "b6464ba1760dbb4f0aaa9d7cd267ec2a031e76fea9ef02d4e475f92d0a187c79"
+    "bytes": 1259984,
+    "sha256": "53c8149195d9121ef4a70b01c271db8e6e115a0722d691cc72b2469c9cd874b6"
   },
   "reports/templates/practice-diary-template.docx": {
     "bytes": 20184,
